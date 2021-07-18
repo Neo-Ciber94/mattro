@@ -1,0 +1,12 @@
+[package]
+name = "mattro"
+description = "A macro attribute parser"
+version = "0.1.0"
+authors = ["Freddy L."]
+edition = "2018"
+
+[dependencies]
+proc-macro2 = "1.0.27"
+syn = { version = "1.0.73", features = ["extra-traits"]}
+quote = "1.0.7"
+linked_hash_set = "0.1.4"
