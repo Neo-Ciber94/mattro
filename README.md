@@ -9,6 +9,10 @@ Add this to your Cargo.toml:
 mattro = "0.1.0"
 ```
 
+You can parse:
+- `Attribute` using `MacroAttribute::new(attribute)`
+- `AttributeArgs` using `MacroAttribute::from_attribute_args(path, args, style)`
+
 ## Example
 Parsing `AttributeArgs`:
 
