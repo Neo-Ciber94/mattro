@@ -164,7 +164,7 @@ impl MetaItem {
         matches!(self, MetaItem::Nested(_))
     }
 
-    /// Converts this meta item into a `String` or `None` if not a path.
+    /// Converts this meta item into a `String` or `None` if is not a path.
     pub fn into_path(self) -> Option<String> {
         match self {
             MetaItem::Path(x) => Some(x),
