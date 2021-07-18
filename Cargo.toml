@@ -9,7 +9,7 @@ category = "rust-patterns"
 license = "MIT"
 repository = "https://github.com/Neo-Ciber94/mattro-rs"
 homepage = "https://crates.io/crates/mattro"
-documentation = "docs.rs/mattro/0.1.1"
+documentation = "https://docs.rs/mattro"
 readme = "README.md"
 
 [dependencies]
