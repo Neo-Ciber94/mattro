@@ -265,6 +265,7 @@ fn get_attribute_args(attr: &Attribute) -> syn::Result<AttributeArgs> {
     }
 }
 
+#[doc(hidden)]
 pub fn lit_to_string(lit: &Lit) -> String {
     match lit {
         Lit::Str(s) => s.value(),
@@ -278,6 +279,7 @@ pub fn lit_to_string(lit: &Lit) -> String {
     }
 }
 
+#[doc(hidden)]
 pub fn display_lit<W: Write>(f: &mut W, lit: &Lit) -> std::fmt::Result {
     match lit {
         Lit::Str(s) => write!(f, "\"{}\"{}", s.value(), s.suffix()),
@@ -301,6 +303,7 @@ pub fn display_lit<W: Write>(f: &mut W, lit: &Lit) -> std::fmt::Result {
     }
 }
 
+#[doc(hidden)]
 pub fn attribute_to_string<'a, I>(style: Option<&AttrStyle>, path: &str, meta_items: I) -> String
 where
     I: IntoIterator<Item = &'a MetaItem>,

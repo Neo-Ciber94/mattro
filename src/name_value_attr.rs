@@ -7,6 +7,7 @@ use syn::{AttrStyle, Attribute, AttributeArgs};
 
 use crate::{MacroAttribute, MetaItem, NameValue, Value, lit_to_string};
 
+/// Represents a `name-value` attribute like `#[attribute(name="value")]`.
 #[derive(Debug, Clone, Eq, PartialEq)]
 pub struct NameValueAttribute {
     path: String,
@@ -97,6 +98,7 @@ impl<'a> Index<&'a str> for NameValueAttribute {
     }
 }
 
+/// An iterator by reference over the values of a `NameValueAttribute`.
 #[derive(Debug, Clone)]
 pub struct Iter<'a> {
     iter: linked_hash_set::Iter<'a, NameValue>,
@@ -119,6 +121,7 @@ impl<'a> IntoIterator for &'a NameValueAttribute {
     }
 }
 
+/// An iterator over the values of a `NameValueAttribute`.
 pub struct IntoIter {
     iter: linked_hash_set::IntoIter<NameValue>,
 }
@@ -184,7 +187,7 @@ pub enum NameValueError {
     InvalidValue(MetaItem),
     /// The name-value contains a duplicated name key.
     DuplicatedKey(String),
-    /// The name-value attribute is in a invalid format.
+    /// The name-value attribute is in an invalid format.
     InvalidAttribute,
 }
 
@@ -200,8 +203,9 @@ impl Debug for NameValueError {
     }
 }
 
-pub fn meta_item_to_string(data: &MetaItem) -> String {
-    match data {
+#[doc(hidden)]
+pub fn meta_item_to_string(meta_item: &MetaItem) -> String {
+    match meta_item {
         MetaItem::Path(path) => path.to_owned(),
         MetaItem::Literal(lit) => lit_to_string(lit),
         MetaItem::NameValue(data) => match &data.value {
