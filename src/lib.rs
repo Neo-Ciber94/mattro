@@ -6,7 +6,7 @@
 //! Add this to your Cargo.toml:
 //! ```
 //! [dependencies]
-//! mattro = "0.1.0"
+//! mattro = "0.1.1"
 //! ```
 //!
 //! You can parse:
