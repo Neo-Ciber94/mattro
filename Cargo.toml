@@ -1,14 +1,15 @@
 [package]
 name = "mattro"
 description = "A macro attribute parser"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Freddy L."]
 edition = "2018"
 keywords = ["api", "proc_macro_attribute", "parser", "attributes"]
 category = "rust-patterns"
 license = "MIT"
 repository = "https://github.com/Neo-Ciber94/mattro-rs"
-documentation = "https://crates.io/crates/mattro"
+homepage = "https://crates.io/crates/mattro"
+documentation = "docs.rs/mattro/0.1.1"
 readme = "README.md"
 
 [dependencies]
