@@ -4,6 +4,11 @@ description = "A macro attribute parser"
 version = "0.1.0"
 authors = ["Freddy L."]
 edition = "2018"
+keywords = ["api", "proc-macro", "parser", "attributes"]
+license = "MIT"
+repository = "https://github.com/Neo-Ciber94/mattro-rs"
+documentation = "https://crates.io/crates/mattro"
+readme = "README.md"
 
 [dependencies]
 proc-macro2 = "1.0.27"

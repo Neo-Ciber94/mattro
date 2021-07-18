@@ -1,3 +1,5 @@
+#![allow(clippy::vec_init_then_push)]
+
 use crate::{Value, NameValue, MetaItem, MacroAttribute};
 use syn::{NestedMeta, MetaNameValue, MetaList, Meta, AttributeArgs, Lit, Path};
 use std::iter::Peekable;

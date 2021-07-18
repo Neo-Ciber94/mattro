@@ -216,7 +216,7 @@ pub fn meta_item_to_string(meta_item: &MetaItem) -> String {
             }
         },
         MetaItem::Nested(data) => {
-            if data.len() > 0 {
+            if !data.is_empty() {
                 data.path.clone()
             } else {
                 format!("{}(...)", data.clone().path)
