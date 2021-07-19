@@ -114,7 +114,7 @@
 //!
 //! // Iterate over the `name-value` pairs
 //! for (name, value) in &name_values_attributes {
-//!     println!("{} => {}", name, value);
+//!     println!("{:7} => {}", name, value);
 //! }
 //! ```
 //!
