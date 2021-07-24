@@ -32,7 +32,7 @@ pub fn my_attribute(attribute: TokenStream, item: TokenStream) -> TokenStream {
     let tokens = attribute.clone();
     let attribute_args: syn::AttributeArgs = syn::parse_macro_input!(tokens);
 
-    // Creates a `MacroAttribute` using the `AttributeArgs`.
+    // Creates a `MacroAttribute` from `AttributeArgs`.
     let attr = MacroAttribute::from_attribute_args(
         // Path of the attribute
         "my_attribute",
@@ -109,7 +109,7 @@ NameValue(
 ### You could convert the attribute into a `name-value` pairs
 
 ```rust
-// Converts the attribute into a `name-value` pairs
+// Converts the attribute into a `name-value` attribute
 let name_values_attributes = attr.into_name_values().unwrap();
 
 // Iterate over the `name-value` pairs
