@@ -32,7 +32,7 @@ impl PartialEq for NameValue {
 }
 
 /// Represents a value for a `name-value` attribute.
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub enum Value {
     /// A literal value: `#[attribute(name="value")]`.
     Literal(Lit),

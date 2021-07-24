@@ -8,7 +8,7 @@ use syn::{AttrStyle, Attribute, AttributeArgs};
 use crate::{MacroAttribute, MetaItem, NameValue, Value, lit_to_string};
 
 /// Represents a `name-value` attribute like `#[attribute(name="value")]`.
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct NameValueAttribute {
     path: String,
     args: LinkedHashSet<NameValue>,

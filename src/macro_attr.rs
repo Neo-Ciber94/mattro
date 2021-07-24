@@ -12,7 +12,7 @@ use crate::visitor::{AttributeArgsVisitor, join_path_to_string};
 /// Represents a macro attribute and its arguments like:
 ///
 /// `#[attribute(key="value")]`
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct MacroAttribute {
     pub(crate) path: String,
     pub(crate) args: Vec<MetaItem>,
@@ -131,7 +131,7 @@ impl Display for MacroAttribute {
 }
 
 /// Represents the data in an attribute.
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub enum MetaItem {
     /// A path like: `#[attribute]`
     Path(String),
